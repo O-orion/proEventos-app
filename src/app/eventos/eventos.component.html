@@ -1,7 +1,35 @@
-<p>Volta de Jesus</p>
-<div *ngFor="let evento of eventos">
-  <p><strong>Tema:</strong>  {{evento.nomeEvento}}</p>
-  <p><strong>Local:</strong>  {{evento.localEvento}}</p>
-  <p><strong>Data:</strong> {{evento.dataEvento}}</p>
-  <hr />
-</div>
+<h2>Eventos</h2>
+<hr>
+<form class="form-inline">
+  <div class="form-group mb-2">
+    <input type="text" class="form-control mr-2" placeholder="buscar">
+    <button class="btn btn-outline-success">Buscar</button>
+  </div>
+
+</form>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Image</th>
+      <th>Tema</th>
+      <th>Local</th>
+      <th>Data</th>
+      <th>Qtd Pessoas</th>
+      <th>Lote</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let evento of eventos">
+    <tr>
+      <td>{{evento.id}}</td>
+      <td></td>
+      <td>{{evento.nomeEvento}}</td>
+      <td>{{evento.localEvento}}</td>
+      <td>{{evento.dataEvento}}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
