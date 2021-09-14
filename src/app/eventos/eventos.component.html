@@ -20,8 +20,8 @@
       <th>Opções</th>
     </tr>
   </thead>
-  <tbody *ngFor="let evento of eventos">
-    <tr>
+  <tbody *ngIf="eventos && eventos.length;" >
+    <tr *ngFor="let evento of eventos">
       <td>{{evento.id}}</td>
       <td></td>
       <td>{{evento.nomeEvento}}</td>
@@ -32,4 +32,17 @@
       <td></td>
     </tr>
   </tbody>
+  <tfoot *ngIf="!eventos.length">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h4>Nenhum evento encontrado!</h4>
+      </td>
+    </tr>
+  </tfoot>
 </table>
+
+<!--
+  Diretiva estrututal tudo que tem "*ng" na frente
+
+  em cima das diretivas estrutural podemos usar o Binding e Interpolação
+-->
